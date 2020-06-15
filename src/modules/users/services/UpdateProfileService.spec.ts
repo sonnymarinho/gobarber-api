@@ -1,8 +1,6 @@
 import AppError from '@shared/errors/AppError';
 import FakeUsersRepository from '@modules/users/repositories/fakes/FakeUsersRepository';
-import FakeStorageProvider from '@shared/container/providers/StorageProvider/fakes/FakeStorageProvider';
 import FakeHashProvider from '@modules/users/providers/HashProvider/fakes/FakeHashProvider';
-import UpdateUserAvatarService from './UpdateUserAvatarService';
 import UpdateProfileService from './UpdateProfileService';
 
 let fakeHashProvider: FakeHashProvider;
@@ -34,6 +32,16 @@ describe('Update Profile', () => {
 
     expect(updatedUser.name).toBe('John Trhe');
     expect(updatedUser.email).toBe('john.trhe@domain.com');
+  });
+
+  it('should not be able to show the profile from non-existing user', async () => {
+    expect(
+      updateProfile.execute({
+        user_id: 'non-existing-user-id',
+        name: 'John Trhe',
+        email: 'john.trhe@domain.com',
+      }),
+    ).rejects.toBeInstanceOf(AppError);
   });
 
   it('should not be able to change another user email', async () => {
