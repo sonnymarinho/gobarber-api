@@ -41,7 +41,7 @@ export default class CreateUsers1589669828335 implements MigrationInterface {
     );
   }
 
-  public async down(queryRunner: QueryRunner): Promise<any> {
+  public async down(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.dropTable('users');
   }
 }
