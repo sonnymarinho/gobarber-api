@@ -3,6 +3,7 @@ import 'reflect-metadata';
 import { injectable, inject } from 'tsyringe';
 
 import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
+import { classToClass } from 'class-transformer';
 import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 import Appointment from '../infra/typeorm/entities/Appointment';
 
@@ -35,6 +36,8 @@ export default class ListProviderAppointmentsService {
       cacheKey,
     );
 
+    // let appointments;
+
     if (!appointments) {
       appointments = await this.appointmentsRepository.findAllInDayFromProvider(
         {
@@ -45,7 +48,7 @@ export default class ListProviderAppointmentsService {
         },
       );
 
-      await this.cacheProvider.save(cacheKey, 'valueeerereredksjlsdkfjlk');
+      await this.cacheProvider.save(cacheKey, classToClass(appointments));
     }
 
     return appointments;
