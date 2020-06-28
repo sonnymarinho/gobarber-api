@@ -12,14 +12,15 @@ export default class EtherealMailProvider implements IMailProvider {
     @inject('MailTemplateProvider')
     private mailTemplateProvider: IMailTemplateProvider,
   ) {
-    nodemailer.createTestAccount().then((account) => {
+    nodemailer.createTestAccount().then((testAccount) => {
+      // create reusable transporter object using the default SMTP transport
       const transporter = nodemailer.createTransport({
-        host: account.smtp.host,
-        port: account.smtp.port,
-        secure: account.smtp.secure,
+        host: 'smtp.ethereal.email',
+        port: 587,
+        secure: false, // true for 465, false for other ports
         auth: {
-          user: account.user,
-          pass: account.pass,
+          user: testAccount.user, // generated ethereal user
+          pass: testAccount.pass, // generated ethereal password
         },
       });
 
