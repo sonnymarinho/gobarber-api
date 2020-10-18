@@ -17,9 +17,11 @@ export default class UsersController {
       password,
     });
 
-    delete user.password;
+    const { password: _, ...props } = user;
 
-    return response.json(user);
+    return response.json({
+      user: props,
+    });
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
