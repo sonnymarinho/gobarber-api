@@ -7,4 +7,5 @@ build/
 ormconfig.json
 
 tmp/*
-!tmp/.gitkeep
+
+!*/**/.gitkeep
