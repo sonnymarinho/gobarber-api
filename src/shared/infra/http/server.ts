@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import 'dotenv/config';
 
-import express, { Request, Response, NextFunction } from 'express';
+import express, { Request, Response } from 'express';
 import 'express-async-errors';
 import cors from 'cors';
 import AppError from '@shared/errors/AppError';
@@ -23,7 +23,7 @@ app.use(routes);
 
 app.use(errors());
 
-app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
+app.use((err: Error, request: Request, response: Response) => {
   if (err instanceof AppError) {
     return response
       .status(err.statusCode)
