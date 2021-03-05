@@ -47,8 +47,8 @@
 
 <p> And it was created during the GoStack Bootcamp by Rocketseat. That was focused on creating an entire application using React, React Native, NodeJS, and other tools. Aborting the following topics: ensure authentication, application routes, ORM for database persistence, SQL and NoSQL, caching,  data validation, SOLID, upload files, establishing default linting code pattern, automatic tests, and rater limit. </p>
 
-Check out the **web application**: [gobarber-web](https://github/sonnymarinho/gobarber-web)</br>
-Check out the **mobile application**: [gobarber-app](https://github/sonnymarinho/gobarber-app)
+Check out the **web application**: [gobarber-web](https://github.com/sonnymarinho/gobarber-web)</br>
+Check out the **mobile application**: [gobarber-app](https://github.com/sonnymarinho/gobarber-app)
 
 ## 🚀 Technologies
 
