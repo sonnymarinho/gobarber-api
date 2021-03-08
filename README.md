@@ -84,9 +84,8 @@ Import the `Insomnia.json` on Insomnia App or click on [Run in Insomnia](#insomn
 - One instance of [Mongo](https://www.mongodb.com/)
 - One instance of [Redis](https://redis.io/)
 
-> Obs.: I recommend use **docker**
-> Assuming that you have docker installed on your computer, jus follow the steps bellow.
-> Otherwise, you can install docker from [here](https://docs.docker.com/engine/install/)
+> Obs.: I recommend use **docker**. <br/>
+> Assuming that you have docker installed on your computer, just follow the steps below. Otherwise, you can install docker from [here](https://docs.docker.com/engine/install/).
 
 **1. Clone the project and access the folder**
 
