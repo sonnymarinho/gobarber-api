@@ -68,6 +68,10 @@ Technologies used to develop the API:
 - [Prettier](https://prettier.io/)
 - [EditorConfig](https://editorconfig.org/)
 
+## 🔶 Diagram
+
+<img align="center" src="docs/assets/diagram.png" alt="Database Diagram" />
+
 ## ✨️ Getting started
 
 Import the `Insomnia.json` on Insomnia App or click on [Run in Insomnia](#insomniaButton) button
