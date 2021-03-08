@@ -84,7 +84,9 @@ Import the `Insomnia.json` on Insomnia App or click on [Run in Insomnia](#insomn
 - One instance of [Mongo](https://www.mongodb.com/)
 - One instance of [Redis](https://redis.io/)
 
-> Obs.: I recommend use [docker](/docs/using_docker.md)
+> Obs.: I recommend use **docker**
+> Assuming that you have docker installed on your computer, jus follow the steps bellow.
+> Otherwise, you can install docker from [here](https://docs.docker.com/engine/install/)
 
 **1. Clone the project and access the folder**
 
@@ -115,8 +117,9 @@ $ docker run --name gobarber_redis -p 6379:6379 -d redis:alpine
 **4. Configure the PostgreSQL**
 
 ```bash
-# Make sure the keys in 'ormconfig.json' to connect with your database
-# are set up correctly, and the container is running.
+# Make sure that the keys in 'ormconfig.json' are set up correctly
+# to connect with your database; that the container is running;
+# and that there is a 'gobarber' database created.
 
 # Once the services are running, run the migrations
 $ yarn typeorm migration:run
